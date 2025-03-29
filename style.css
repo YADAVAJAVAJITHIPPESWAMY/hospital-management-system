@@ -1,0 +1,581 @@
+html {
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    font-family: roboto;
+    background-color: #ffffff;
+    color: #333;
+    min-height: 100vh; /* Ensure body covers full height */
+    display: flex;
+    flex-direction: column; /* Allow body to grow with content */
+}
+header, footer {
+    width: 100%; /* Ensure header and footer are full-width */
+}
+
+footer {
+    position: relative;
+    top: auto; /* Ensure footer sticks to the bottom */
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+main {
+    flex: 1; /* Ensures the content grows and fills the remaining space */
+}
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.hero, .two-row-list, .doctor-cards, .contact-methods {
+    width: 100%;
+    box-sizing: border-box; /* Include padding/border in the width calculation */
+}
+.hero {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: auto; /* Prevent image from spilling over */
+}
+
+img {
+    max-width: 100%; /* Prevent images from exceeding container width */
+    height: auto; /* Maintain aspect ratio */
+}
+header, .hero, .button-container, .doctor-cards, .contact-methods {
+    padding: 10px 20px; /* Maintain adequate padding */
+    margin: 0; /* Remove unwanted margins */
+}
+
+
+header {
+    background-image: url("https://marketplace.canva.com/EAFma2X-5bw/1/0/1600w/canva-green-minimalist-watercolor-background-linkedin-banner-9ZLKbv0gMWE.jpg");
+    background-size: cover;
+    padding: 20px; /* Space around the header */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items */
+    justify-content: center; /* Vertically center items */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Slightly larger font size for emphasis */
+    color: #4CAF50; /* White text color for visibility */
+    text-align: center; /* Center the heading */
+    font-weight: 500; /* Medium weight for a clean look */
+}
+
+nav {
+    margin-top: 20px; /* Space between heading and navigation */
+}
+
+nav ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center navigation items */
+    gap: 30px; /* More space between items */
+}
+
+nav li {
+    position: relative; /* Position for the pseudo-element */
+}
+
+nav a {
+    text-decoration: none; /* Remove underline from links */
+    color: #4CAF50; /* White color for links */
+    font-weight: 600; /* Bold text for emphasis */
+    transition: color 0.3s, background-color 0.3s, transform 0.3s ease; /* Smooth transition for hover effect */
+    padding: 12px 20px; /* Add padding for better click area */
+    border-radius: 25px; /* Rounded edges for a soft, modern look */
+    border: 2px solid transparent; /* Transparent border for spacing */
+    text-transform: uppercase; /* Uppercase for a clean, consistent look */
+}
+
+nav a:hover {
+    color: #4CAF50; /* Green text on hover */
+    background-color: #fff; /* White background on hover */
+    border-color: #4CAF50; /* Green border on hover */
+    transform: scale(1.05); /* Slight scale effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header {
+        padding: 15px; /* Reduce padding on small screens */
+    }
+
+    h1 {
+        font-size: 1.8em; /* Smaller heading on small screens */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+    }
+
+    nav li {
+        margin: 5px 0; /* Reduce space between items */
+    }
+}
+
+
+.hero {
+    background-image: url('https://static.vecteezy.com/system/resources/previews/037/247/199/non_2x/ai-generated-national-doctors-day-advertisment-background-with-copy-space-free-photo.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff; /* Text color */
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin: 20px 0;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin: 10px 0 30px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn-SOS {
+    background-color: #c02727; /* Button color */
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+.btn-SOS:hover  {
+    background-color: #b9513c; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+.btn {
+    background-color: #45a049; /* Button color */
+    color: white;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Change color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.direction {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #f0f0f0; /* Light color for direction text */
+}
+#services {
+    text-align: center; /* Center align the text */
+    padding: 40px 20px; /* Padding around the section */
+    background-color: #f1f1f1; /* Light background color for the section */
+}
+
+#services h2 {
+    font-size: 2.5em; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.two-row-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center; /* Center items horizontally */
+}
+
+.two-row-list li {
+    background-color: #4CAF50; /* Green background for list items */
+    color: white; /* White text color */
+    padding: 15px 25px; /* Padding for list items */
+    margin: 10px; /* Space between list items */
+    border-radius: 5px; /* Slightly rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+}
+
+.two-row-list li:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge item on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #services h2 {
+        font-size: 2em; /* Smaller heading on small screens */
+    }
+
+    .two-row-list li {
+        padding: 10px 20px; /* Adjust padding for small screens */
+        font-size: 0.9em; /* Smaller font size for list items */
+    }
+}
+#doctors {
+    text-align: center; /* Center align the text */
+    padding: 40px 20px; /* Padding around the section */
+    background-color: #e8f5e9; /* Light green background color */
+}
+
+#doctors h2 {
+    font-size: 2.5em; /* Font size for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#doctors p {
+    margin-bottom: 40px; /* Space below the introductory paragraph */
+}
+
+.doctor-cards {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center cards horizontally */
+    gap: 20px; /* Space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.doctor-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 20px; /* Space inside cards */
+    text-align: center; /* Center align text inside cards */
+    width: 250px; /* Fixed width for cards */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions for hover effect */
+}
+.doctor-image {
+    width: 100%; /* Image takes full width of card */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Rounded corners for the image */
+}
+
+.doctor-card h3 {
+    margin: 15px 0 5px; /* Space around the name */
+    font-size: 1.5em; /* Font size for the name */
+}
+
+.doctor-card p {
+    margin: 5px 0; /* Space around specialty and location */
+}
+
+/* Style anchor tags to remove default styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit text color */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .doctor-cards {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+
+    .doctor-card {
+        width: 80%; /* Full width on small screens */
+    }
+}
+
+#contact {
+    text-align: center; /* Center align the text */
+    padding: 40px 20px; /* Padding around the section */
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+#contact h2 {
+    font-size: 2.5em; /* Font size for the heading */
+    color: #4CAF50; /* Green color for the title */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+#contact p {
+    margin-bottom: 30px; /* Space below the paragraph */
+    font-size: 1.2em; /* Font size for the paragraph */
+    color: #555; /* Darker gray for contrast */
+}
+
+.contact-methods {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items */
+    gap: 30px; /* Space between cards */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contact-card {
+    background-color: #ffffff; /* White background for cards */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding for the card */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transitions */
+    text-align: center; /* Center text in the card */
+    width: 200px; /* Fixed width for uniformity */
+}
+
+.contact-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.contact-card .icon {
+    margin-bottom: 15px; /* Space below the icon */
+}
+
+.contact-card img {
+    width: 50px; /* Set width for icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-card h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #4CAF50;
+}
+
+.contact-card p {
+    color: #777; /* Gray color for additional text */
+    margin: 0; /* Remove default margin */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    #contact h2 {
+        font-size: 2em; /* Smaller heading on small screens */
+    }
+
+    #contact p {
+        font-size: 1em; /* Smaller paragraph font size */
+    }
+
+    .contact-methods {
+        flex-direction: column; /* Stack cards vertically on small screens */
+        align-items: center; /* Center cards */
+    }
+}
+footer {
+    background-color: #4CAF50; /* Green background for the footer */
+    color: white; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px; /* Padding around the footer */
+    position: relative; /* Allows positioning for elements inside */
+    bottom: 0; /* Stick to bottom */
+    width: 100%; /* Full width */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2); /* Soft shadow above */
+    font-size: 1em; /* Font size for text */
+}
+
+footer p {
+    margin: 0; /* Remove default margin */
+}
+
+footer a {
+    color: white; /* White color for links */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s; /* Smooth transition for hover */
+}
+
+footer a:hover {
+    color: #e8f5e9; /* Light green color on hover */
+}
+.contact-link{
+    text-decoration: none;
+}
+/* Testimonials Section */
+#testimonials {
+    padding: 40px 20px;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+#testimonials h2 {
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.testimonial {
+    background-color: #fff;
+    padding: 20px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial p {
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial h4 {
+    margin-top: 15px;
+    color: #333;
+}
+/* Back to Top Button */
+#backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+#backToTopBtn:hover {
+    background-color: #555;
+}
+/* Social Media Icons */
+.social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.social-media a {
+    margin: 0 10px;
+    font-size: 1.5em;
+    color: #bbc9bc;
+    text-decoration: none;
+    padding:10px;
+    margin-bottom: 20px;
+}
+
+.social-media a:hover {
+    color: #333;
+}
+#back-to-top {
+    position: fixed;
+    bottom: 20px;   /* Position the button 20px above the bottom */
+    right: 20px;    /* Position the button 20px from the right */
+    background-color: #4CAF5055;  /* Dark background */
+    color: white;   /* White text */
+    border: none;   /* No border */
+    border-radius: 50%;  /* Circle shape */
+    width: 50px;     /* Set width of the circle */
+    height: 50px;    /* Set height of the circle */
+    display: flex;   /* Flexbox for centering the content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    font-size: 30px; /* Increase the size of the arrow */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    z-index: 1000;  /* Ensure the button is on top of other elements */
+    transition: all 0.3s ease;  /* Smooth transition for hover effect */
+}
+
+#back-to-top:hover {
+    background-color: #91c6cd;  /* Lighter background on hover */
+    transform: scale(1.1);  /* Slightly enlarge button on hover */
+}
+
+#back-to-top:focus {
+    outline: none;  /* Remove outline when clicked */
+}
+#cookie-banner {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%); /* Centers the banner horizontally */
+    background: #2a2a2a;  /* Dark background for contrast */
+    color: #fff;  /* White text for readability */
+    padding: 20px 30px;  /* Add some space around the text */
+    border-radius: 15px;  /* Rounded corners for a modern look */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);  /* Subtle shadow for depth */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;  /* Adjust width to your preference */
+    max-width: 600px;  /* Prevent banner from getting too large */
+    z-index: 9999;  /* Make sure it's on top of other content */
+    font-family: 'Arial', sans-serif;  /* Modern font */
+}
+
+#cookie-banner p {
+    margin: 0;
+    font-size: 14px;  /* Smaller font for the text */
+    line-height: 1.5;
+    flex: 1;  /* Take up all available space */
+}
+
+#cookie-banner a {
+    color: #4caf50;  /* Modern green color for the link */
+    text-decoration: none;
+}
+
+#cookie-banner a:hover {
+    text-decoration: underline;  /* Add an underline on hover */
+}
+
+#cookie-banner button {
+    background-color: #4caf50;  /* Green button for a modern touch */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#cookie-banner button:hover {
+    background-color: #45a049;  /* Darker green when hovered */
+    transform: scale(1.05);  /* Slight scale effect on hover */
+}
+
+#cookie-banner button:focus {
+    outline: none;  /* Remove focus outline */
+}
+/* WhatsApp Chat Link Styling */
+.whatsapp-chat {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #45a049; /* WhatsApp green */
+    color: white;
+    font-size: 16px;
+
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-chat:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.whatsapp-chat i {
+    margin-right: 8px;
+    font-size: 20px;
+}

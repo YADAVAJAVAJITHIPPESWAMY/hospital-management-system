@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Medical Assistance</title>
+    <link rel="icon"
+        href="https://static.vecteezy.com/system/resources/previews/002/685/731/non_2x/medical-caduceus-symbol-design-illustration-eps-format-suitable-for-your-design-needs-logo-illustration-animation-etc-vector.jpg"
+        type="image/icon type">
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script src="https://kit.fontawesome.com/5114ae65a1.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        function showDescription(service) {
+            const descriptions = {
+                "General Medicine": "Our General Medicine department is dedicated to providing comprehensive and holistic healthcare services to adults, focusing on the prevention, diagnosis, and treatment of a wide range of medical conditions. Our team of experienced and skilled physicians works collaboratively to assess each patient's health needs, offering personalized care plans tailored to their individual requirements. We prioritize early detection and preventative measures, ensuring that patients receive the necessary screenings, lifestyle guidance, and vaccinations to maintain optimal health. Whether managing chronic illnesses, addressing acute medical concerns, or providing routine check-ups, our General Medicine department ensures that every patient receives the highest level of care with a focus on overall well-being and long-term health outcomes.",
+                "Specialized Care": "We offer highly specialized care across a range of medical fields, including cardiology, orthopedics, and neurology, to address complex and multifaceted health issues. Our dedicated team of experts in each specialty is committed to providing the highest standard of care, utilizing advanced diagnostic techniques, state-of-the-art treatment options, and innovative therapies tailored to each patient's unique needs. Whether you're seeking advanced heart care for cardiovascular conditions, expert orthopedic treatment for bone and joint issues, or cutting-edge neurological care for conditions affecting the brain and nervous system, our specialized teams work closely together to ensure comprehensive and personalized treatment plans. We are dedicated to improving patient outcomes through a combination of expertise, compassion, and the latest advancements in medical science.",
+                "Emergency Services": "Our Emergency Services are available around the clock, 24/7, ensuring that help is always at hand in times of urgent need. We are fully equipped with the latest medical technology and staffed by highly trained professionals who specialize in responding to critical situations with the highest level of care and urgency. Whether it's a medical emergency, trauma, or an unforeseen health crisis, our team is prepared to provide swift and effective treatment. We prioritize quick intervention, ensuring that each patient receives immediate attention in a safe, compassionate, and efficient environment. With our state-of-the-art facilities and dedicated emergency care team, you can trust that your health is in capable hands, no matter the time of day or night.",
+                "Diagnostic Tests": "We provide a comprehensive range of diagnostic tests to accurately assess and monitor health conditions, ensuring that patients receive precise and timely results. Our services include advanced blood tests, state-of-the-art imaging techniques, and various screenings, all designed to detect underlying health issues early and facilitate effective treatment plans. With the use of cutting-edge technology and equipment, our expert medical professionals work diligently to analyze test results, helping to identify potential health concerns and guide personalized care. Whether you're undergoing routine check-ups or need specialized testing for specific conditions, our diagnostic services are aimed at providing clarity and supporting informed decision-making for your healthcare needs.",
+                "Surgery": "Our team of skilled surgeons is dedicated to performing a wide range of surgical procedures with the highest level of expertise and precision. Utilizing state-of-the-art technology and advanced surgical techniques, we ensure that each procedure is carried out with the utmost care, safety, and efficiency. Our surgeons work closely with multidisciplinary teams to develop personalized treatment plans, aiming to achieve the best possible outcomes for our patients. Whether performing routine surgeries or complex, life-saving interventions, our commitment to innovation, combined with our experience and dedication, ensures that patients receive the most effective care available, all while minimizing recovery time and maximizing results."
+            };
+
+            const descriptionElement = document.getElementById("service-description");
+            descriptionElement.innerText = descriptions[service] || "Description not available.";
+            descriptionElement.style.display = "block";
+        }
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function acceptCookies() {
+            document.getElementById('cookie-banner').style.display = 'none';
+        }
+    </script>
+    <style>
+        /* Default Styles */
+        .navbar ul li a {
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .navbar ul li a span {
+                display: none;
+                /* Hide text on small devices */
+            }
+
+            .navbar ul li a {
+                justify-content: center;
+            }
+
+            .navbar ul li img,
+            .navbar ul li i {
+                font-size: 2rem;
+                /* Increase icon size for better visibility */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <h1>Welcome to Our Hospital</h1>
+            <nav>
+                <ul>
+                    <li><a href="#"><i class="fas fa-home"></i><span>&nbsp;Home</span></a></li>
+                    <li><a
+                            href="https://www.redcross.org/take-a-class/first-aid?srsltid=AfmBOoqkODIIKLyqkTZqt56Xxa19tTdSG0JFRZP91H-XVDPJgzWMh9F3"><i
+                                class="fas fa-first-aid"></i><span>&nbsp;First Aid</span></a></li>
+                    <li><a href="https://www.apollo247.com/specialties"><i
+                                class="fas fa-user-md"></i>&nbsp;<span>Doctors</span></a></li>
+                    <li><a href="https://www.medscape.com/"><i class="fas fa-newspaper"></i>&nbsp;<span>News</span></a>
+                    </li>
+                    <li><a href="#contact"><i class="fa-solid fa-phone"></i>&nbsp;<span>Contact</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <h2>Your Health, Our Responsibility</h2>
+        <p>Experience superior healthcare that sets the standard for quality care.</p>
+
+        <div class="button-container">
+            <a class="btn-SOS" href="tel:+916301211673" style="font-size: 20px;"><i
+                    class="fa-solid fa-phone"></i>&nbsp;&nbsp;SOS</a>
+            <button class="btn" id="sendLocationBtn" style="font-size: 20px;"><i
+                    class="fa-solid fa-location-dot"></i>&nbsp;&nbsp;Send Live Location</button>
+            <a href="https://wa.me/916301211673?text=Hello!%20I%20need%20assistance." target="_blank"
+                class="whatsapp-chat d-block btn btn-success">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+
+        </div>
+
+        <p class="direction" id="demo"></p>
+
+        <script>
+            var x = document.getElementById("demo");
+            var latitude, longitude;
+
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(function (position) {
+                        latitude = position.coords.latitude;
+                        longitude = position.coords.longitude;
+                        showPosition(position);
+                    }, showError);
+                } else {
+                    x.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+
+            function showPosition(position) {
+                x.innerHTML = "Latitude: " + latitude + "<br>Longitude: " + longitude;
+            }
+
+            document.getElementById('sendLocationBtn').onclick = function () {
+                if (navigator.geolocation) {
+                    navigator.geolocation.watchPosition(sendLocation, showError);
+                } else {
+                    alert("Geolocation is not supported by this browser.");
+                }
+            };
+
+            function sendLocation(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                const locationUrl = `https://www.google.com/maps?q=${latitude},${longitude}`;
+                const message = `My current location: ${locationUrl}`;
+                const phoneNumber = "+916301211673"; // Replace with the recipient's phone number
+
+                // WhatsApp API URL
+                const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+                // Open WhatsApp with the message
+                window.open(whatsappUrl, '_blank');
+            }
+
+            function showError(error) {
+                switch (error.code) {
+                    case error.PERMISSION_DENIED:
+                        alert("User denied the request for Geolocation.");
+                        break;
+                    case error.POSITION_UNAVAILABLE:
+                        alert("Location information is unavailable.");
+                        break;
+                    case error.TIMEOUT:
+                        alert("The request to get user location timed out.");
+                        break;
+                    case error.UNKNOWN_ERROR:
+                        alert("An unknown error occurred.");
+                        break;
+                }
+            }
+        </script>
+    </section>
+
+
+    <!-- Full Width Live Map Section -->
+    <section id="live-map" style="width: 100%; height: 400px;">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8354345094927!2d144.95373531531846!3d-37.81627997975178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f12b8f5%3A0x5045675218ced30!2sYour%20Hospital%20Name!5e0!3m2!1sen!2sau!4v1625812911032!5m2!1sen!2sau"
+            width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul class="two-row-list">
+            <li onclick="showDescription('General Medicine')">General Medicine</li>
+            <li onclick="showDescription('Specialized Care')">Specialized Care</li>
+            <li onclick="showDescription('Emergency Services')">Emergency Services</li>
+            <li onclick="showDescription('Diagnostic Tests')">Diagnostic Tests</li>
+            <li onclick="showDescription('Surgery')">Surgery</li>
+        </ul>
+    </section>
+
+    <section id="service-description"
+        style="display:none; padding: 20px; border: 1px solid #ccc; margin-top: 20px; border-radius: 5px; background-color: #f9f9f9;">
+        <h3>Service Description</h3>
+        <p>Select a service to see its description.</p>
+    </section>
+    <section id="testimonials">
+        <h2>What Our Patients Say</h2>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"The care I received was exceptional. Highly recommend their services!"</p>
+                <h4>- Sarah K.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"Professional and compassionate staff. They made me feel at ease."</p>
+                <h4>- Michael B.</h4>
+            </div>
+            <div class="testimonial">
+                <p>"State-of-the-art facilities and excellent medical expertise."</p>
+                <h4>- Emily R.</h4>
+            </div>
+        </div>
+    </section>
+
+    <section id="doctors">
+        <h2>Our Doctors</h2>
+        <p>Meet our experienced team of medical professionals.</p>
+        <div class="doctor-cards">
+            <a href="https://www.apollo247.com/doctors/dr-ranga-manikandan-dd74456a-17a0-4a7b-ac45-0c8a00dc4ba9?consultMode=PHYSICAL&facilityId=350d07a4-2c6b-4e85-b268-bd3f71cd0591"
+                target="_blank">
+                <div class="doctor-card">
+                    <img src="https://img.freepik.com/premium-photo/generative-ai-illustration-caucasian-old-doctor-portrait-with-gown_58460-13198.jpg"
+                        alt="Doctor 1" class="doctor-image">
+                    <h3>Dr. Ranga Manikandan</h3>
+                    <p>MBBS., MD., DM.DNB - Cardiology<br>6+ years experience<br>Cardiologist<br>80 Feet Road, KK Nagar,
+                        Madurai, 625001</p>
+                </div>
+            </a>
+            <a href="https://www.apollo247.com/doctors/dr-padmavathy-m-f4f9ee7b-9e0f-4aa8-8787-f0b3abdf7c71?consultMode=PHYSICAL&facilityId=350d07a4-2c6b-4e85-b268-bd3f71cd0591"
+                target="_blank">
+                <div class="doctor-card">
+                    <img src="https://img.freepik.com/premium-photo/photo-female-doctor-hospital_1109459-958.jpg"
+                        alt="Doctor 2" class="doctor-image">
+                    <h3>Dr. Padmavathy M</h3>
+                    <p>MD.,(DVL ) F.C.D.<br>10+ years experience<br>Dermatologist<br>80 Feet Road, KK Nagar, Madurai,
+                        625001</p>
+                </div>
+            </a>
+            <a href="https://www.apollo247.com/doctors/dr-karthik-s-n-13741241-d306-4853-bdad-74f3a235576a?consultMode=PHYSICAL&facilityId=350d07a4-2c6b-4e85-b268-bd3f71cd0591"
+                target="_blank">
+                <div class="doctor-card">
+                    <img src="https://img.freepik.com/premium-photo/portrait-doctor-looking-confident-powerful_162944-4976.jpg"
+                        alt="Doctor 3" class="doctor-image">
+                    <h3>Dr. Karthik S N</h3>
+                    <p>MBBS, MD(Gen.Med), DM(Neuro)<br>13+ years experience<br>Neurologist<br>80 Feet Road, KK Nagar,
+                        Madurai, 625001</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need to schedule an appointment, please reach out to us.</p>
+        <div class="contact-methods">
+            <div class="contact-card" onclick="window.location.href='tel:+916301211673'">
+                <div class="icon">
+                    <i class="fa-solid fa-phone" style="font-size: 50px; color: #4CAF50;"></i>
+                </div>
+                <h3>Call Us</h3>
+            </div>
+            <div class="contact-card">
+                <div class="icon">
+                    <i class="fas fa-envelope" style="font-size: 50px; color: #4CAF50;"></i>
+                </div>
+                <h3>
+                    <a href="mailto:99220041595@klu.ac.in" class="contact-link" style="color: #4CAF50;">Email Us</a>
+                </h3>
+            </div>
+    </section>
+    <div id="cookie-banner">
+        <p>We use cookies to improve your experience. By using our site, you accept our cookie policy. <a href="#">Learn
+                more</a></p>
+        <button onclick="acceptCookies()">Accept</button>
+    </div>
+    <footer>
+        <div class="social-media">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p style="padding-top: 10px;">&copy; 2024 Rapid Medical Assistance. All rights reserved.</p>
+    </footer>
+    <button id="back-to-top" onclick="scrollToTop()">↑</button>
+    <script src="//code.tidio.co/1fygvchz4met7oambfwkerkou3j1kvrr.js" async></script>
+</body>
+
+</html>
